@@ -1,4 +1,6 @@
-site_name: SSIX Protocol Documentation
+site_name: SSIX Protocol
+
+site_description: Sustainable Supply Information Exchange (SSIX) Protocol Documentation
 
 theme:
   name: material
