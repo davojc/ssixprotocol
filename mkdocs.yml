@@ -4,3 +4,10 @@ site_description: Sustainable Supply Information Exchange (SSIX) Protocol Docume
 
 theme:
   name: material
+
+
+nav:
+  - Home: 'index.md'
+  - About: 'whatisssix.md'
+  - Mission: 'ssixmission.md'
+  - Specification: 'specification.md'
