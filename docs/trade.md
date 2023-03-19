@@ -9,7 +9,7 @@ Trades represent the exchange of goods and services between entities on a trade 
 | ID | Y | integer | An ID uniquely identifying the trade within a trade network |
 | Parties | Y | TradeParty[1:] | The parties this trade addresses |
 | Products | Y | TradeProduct[1:] | A list of products that are subject to the trade |
-| Documents | Y | Document.ID | References to Documents that belong to the trade |
+| Documents | Y | Document.ID[] | References to Documents that belong to the trade |
 | Locations | Y | TradeLocation[2:] | There must be at least two locations attached to a trade, of types "from" and "to". Additional locations can be added as needed |
 
 
@@ -52,3 +52,52 @@ Product units are used to create classifications of quantifiable units in a trad
 | Location    | Y    | physicalLocation  | References a spot or area on the globe                       |
 | Description | Y    | string            | a short description of the location                          |
 | Quantity    | N    | float             | optionally: the total quantity of products delivered from or to the location |
+
+
+
+## Example Trade
+
+```json
+{
+	"id": 12345,
+	"parties": [
+		{
+			"entity": 1,
+			"role": "author"
+		},
+		{
+			"entity": 2,
+			"role": "beneficiary"
+		}
+	],
+	"products": [
+		{
+			"description": "Coolbox Supa Max 5",
+			"quantity": 1,
+			"unit": "pcs"
+		},
+		{
+			"description": "Speyside Glenlivet - Still Water",
+			"quantity": 6,
+			"unit": "bottles"
+		}
+	],
+	"documents": [ 2983, 481 ],
+	"locations": [
+		{
+			"type": "from",
+			"location": {
+				"country": "GB",
+				"postalCode": "NW3 5JS",
+				"street": "124 Finchley Road",
+				"locality": "Regina House"
+			}
+		},
+		{
+			"type": "to",
+			"location": "GPS:47.365053421183205N8.549100725969838E"
+		}
+	]
+}
+```
+

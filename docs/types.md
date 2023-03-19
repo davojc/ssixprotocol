@@ -28,23 +28,22 @@ Types, while written in a clear and proper way including whitespacing in the tex
 
 | Type Name    | Definition                                                   |
 | ------------ | ------------------------------------------------------------ |
-| \<type>[:n]  | a list of type with maximum n length; for strings, this defines the maximum string length |
-| \<type>[n:]  | a list of type with minimum n length; for strings this is the minimum string length |
-| \<type>[n:m] | a list of type with minimum length of n and maximum length of m; for strings this is the length must be between n and m |
-| \<type>[]    | a list of type with no specific minimum or maximum length, including an empty array |
+| <type\>[:n]  | a list of type with maximum n length; for strings, this defines the maximum string length |
+| <type\>[n:]  | a list of type with minimum n length; for strings this is the minimum string length |
+| <type\>[n:m] | a list of type with minimum length of n and maximum length of m; for strings this is the length must be between n and m |
+| <type\>[]    | a list of type with no specific minimum or maximum length, including an empty array |
 
 
 
 ## Simple types
 
-### Definition
 
 | Type Name | Definition |
 | - | - |
 | string | any number of 8-bit or 16-bit characters concatenated, including an empty string |
 | number | any number of digits comprising an integer value between -2,147,483,647 and 2,147,483,647 |
 | integer | any number of digits comprising an integer value between 0 and 2,147,483,647 |
-| float | ::= \<number> [ "." \<number> ] <br />any number of digits to represent a value, optionally followed by a decimal point and a fractional value of up to 5 digits |
+| float | ::= <number\> \| <number\> "." <number\> <br>any number of digits to represent a value, optionally followed by a decimal point and a fractional value of up to 5 digits<br />The number must fit within a 64-bit representation |
 | byte | a number in the range of 0..255 |
 | boolean | a number of either 1 for true or 0 for false |
 
@@ -54,7 +53,7 @@ Types, while written in a clear and proper way including whitespacing in the tex
 
 ### Date
 
-date ::= \<year> \<month> \<day>
+date ::= <year\> <month\> <day\>
 
 year ::= integer[4]   ; representing a 4-digit year, e.g. 2023 
 
@@ -66,7 +65,7 @@ day ::= integer[2] 	; the day of the month, from 01 as its first day, inclidung 
 
 ### Time
 
-time ::= \<hh>  \<mm>  \<ss> ["Z" | ["+" | "-"] \<hh> \<mm>]
+time ::= <hh\>  <mm\>  <ss\> ["Z" | ["+" | "-"] <hh\> <mm\>]
 
 hh ::= integer[2]   ; a value between 0 - 23
 
@@ -76,7 +75,7 @@ mm ::= integer[2]   ; a value between 0 - 59
 
 ### Timestamp
 
-timestamp ::= \<date> "T" \<time>
+timestamp ::= <date\> "T" <time\>
 
 *Example*: `20230311T080123+0100`
 
@@ -84,21 +83,21 @@ timestamp ::= \<date> "T" \<time>
 
 A physical location either points to a single spot on the globe, or defines an area as a polygon having its vertices defined by locators
 
-physicalLocation ::= \<locator> | \<locator>[] 
+physicalLocation ::= <locator\> | <locator\>[] 
 
 ### Locator
 
 The locator type specifies the source for a location
 
-locator ::= "GPS" ":" \<latitude> \<longitude> | \<Address>
+locator ::= "GPS" ":" <latitude\> <longitude\> | <Address\>
 
-latitude ::= \<float> ["N" | "S"]
+latitude ::= <float\> ["N" | "S"]
 
-longitude ::= \<float> ["E" | "W"]
+longitude ::= <float\> ["E" | "W"]
 
 ### Country
 
-country ::= string[2] | \<string>	;  [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1) or a text description
+country ::= string[2] | <string\>	;  [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1) or a text description
 
 ## Enumerations
 
@@ -118,7 +117,7 @@ tradeLocationType ::= "origin" | "from" | "to" | "via"
 
 This type specifies the role of a party attached to a document, or where a document is attached to
 
-documentPartyRole ::= "author" | "beneficiary" | "agent" | "endorser"
+documentPartyRole ::= "author" | "beneficiary" | "agent" | "endorser" | "recipient"
 
 ### Hash Method
 

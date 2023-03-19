@@ -1,0 +1,17 @@
+{
+	"ID": 2983,
+	"name": "Invoice",
+	"type": 72,
+	"parties": [
+		{
+			"entity": 1,
+			"role": "author"			
+		}
+		{
+			"entity": 2,
+			"role": "recipient"			
+		}
+	],
+	"content": "data:application/pdf;base64,JVBERi0xLjMKJcTl8uXrp/Og0MTGCjMgMCBvYmoKPD...",
+	"isHumanReadable": 1
+}

@@ -1,0 +1,16 @@
+{
+	"ID": 1,
+	"name": "iov42 Ltd",
+	"type": "organisation",
+	"locations": [
+		{
+			"country": "GB",
+			"postalCode": "NW3 5JS",
+			"street": "124 Finchley Road",
+			"locality": "Regina House"
+		}
+	],
+	"creationDate": "20160601",
+	"legalId": "123908014",
+	"legalCountry": "GB"
+}

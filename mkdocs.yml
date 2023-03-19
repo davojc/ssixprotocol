@@ -10,7 +10,8 @@ nav:
   - Home: 'index.md'
   - About: 'whatisssix.md'
   - Mission: 'ssixmission.md'
-  - Specification: 'specification.md'
+  - Specification: 
+    - General: 'specification.md'
     - Types: 'types.md'
     - Common Objects: 'specification-common.md'
     - Entities: 'entity.md'

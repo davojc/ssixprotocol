@@ -1,0 +1,41 @@
+{
+	"id": 12345,
+	"parties": [
+		{
+			"entity": 1,
+			"role": "author"
+		},
+		{
+			"entity": 2,
+			"role": "beneficiary"
+		}
+	],
+	"products": [
+		{
+			"description": "Coolbox Supa Max 5",
+			"quantity": 1,
+			"unit": "pcs"
+		},
+		{
+			"description": "Speyside Glenlivet - Still Water",
+			"quantity": 6,
+			"unit": "bottles"
+		}
+	],
+	"documents": [ 2983, 481 ],
+	"locations": [
+		{
+			"type": "from",
+			"location": {
+				"country": "GB",
+				"postalCode": "NW3 5JS",
+				"street": "124 Finchley Road",
+				"locality": "Regina House"
+			}
+		},
+		{
+			"type": "to",
+			"location": "GPS:47.365053421183205N8.549100725969838E"
+		}
+	]
+}
