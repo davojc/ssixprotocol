@@ -40,12 +40,12 @@ Document types are used to create classifications of documents within a trade ne
 
 ### Document Signature
 
-| Field Name | Req  | Type       | Description                                                  |
-| ---------- | ---- | ---------- | ------------------------------------------------------------ |
-| Signature  | Y    | byte[64]   | The signature value                                          |
-| Timestamp  | Y    | timestamp  | The date and time the signature was created                  |
-| Public Key | Y    | byte[]     | The public key to verfiy the signature                       |
-| Identifier | Y    | Identifier | The identifier to the party on the trade network, to verify the public key and check for potential retractions |
+| Field Name | Req  | Type          | Description                                                  |
+| ---------- | ---- | ------------- | ------------------------------------------------------------ |
+| Signature  | Y    | byte[64]      | The signature value                                          |
+| Timestamp  | Y    | timestamp     | The date and time the signature was created                  |
+| Public Key | Y    | byte[]        | The public key to verfiy the signature                       |
+| Identifier | Y    | Identifier.ID | The identifier to the party on the trade network, to verify the public key and check for potential retractions |
 
 
 
