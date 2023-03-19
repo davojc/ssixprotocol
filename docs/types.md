@@ -33,7 +33,7 @@ Types, while written in a clear and proper way including whitespacing in the tex
 | \<type>[n:m] | a list of type with minimum length of n and maximum length of m; for strings this is the length must be between n and m |
 | \<type>[]    | a list of type with no specific minimum or maximum length, including an empty array |
 
-### 
+
 
 ## Simple types
 
@@ -47,7 +47,6 @@ Types, while written in a clear and proper way including whitespacing in the tex
 | float | ::= \<number> [ "." \<number> ] <br />any number of digits to represent a value, optionally followed by a decimal point and a fractional value of up to 5 digits |
 | byte | a number in the range of 0..255 |
 | boolean | a number of either 1 for true or 0 for false |
-|  |  |
 
 
 
@@ -63,23 +62,29 @@ month ::= integer[2]	; the month, starting from 01=January, including leading ze
 
 day ::= integer[2] 	; the day of the month, from 01 as its first day, inclidung leading zeroes
 
+*Example*: `20230311`
+
 ### Time
 
-time ::= \<hh> "." \<mm> "." \<ss> ["Z" | ["+" | "-"] \<hh> ":" \<mm>]
+time ::= \<hh>  \<mm>  \<ss> ["Z" | ["+" | "-"] \<hh> \<mm>]
 
 hh ::= integer[2]   ; a value between 0 - 23
 
 mm ::= integer[2]   ; a value between 0 - 59
 
+*Example*: `080123Z` or `080123+0100`
+
 ### Timestamp
 
 timestamp ::= \<date> "T" \<time>
+
+*Example*: `20230311T080123+0100`
 
 ### Physical Location
 
 A physical location either points to a single spot on the globe, or defines an area as a polygon having its vertices defined by locators
 
-physicalLocation ::= \<locator> |\<locator>[] 
+physicalLocation ::= \<locator> | \<locator>[] 
 
 ### Locator
 
