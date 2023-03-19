@@ -11,3 +11,8 @@ nav:
   - About: 'whatisssix.md'
   - Mission: 'ssixmission.md'
   - Specification: 'specification.md'
+    - Types: 'types.md'
+    - Common Objects: 'specification-common.md'
+    - Entities: 'entity.md'
+    - Documents: 'document.md'
+    - Trades: 'trade.md'

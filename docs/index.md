@@ -6,7 +6,7 @@ There are **three pillars of sustainability: economic development, social develo
 
 ## Supply
 
-Supply of commodities and goods plays a huge part in all three aspects of sustainability. OFten, much has been made of the negative impacts of supply on sustainability but with increased awareness and growing legislation, it has never been more important for supply networks to be sustainable.
+Supply of commodities and goods plays a huge part in all three aspects of sustainability. Often, much has been made of the negative impacts of supply on sustainability but with increased awareness and growing legislation, it has never been more important for supply networks to be sustainable.
 
 ## Data
 
